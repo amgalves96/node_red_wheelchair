@@ -1,0 +1,1134 @@
+[
+    {
+        "id": "84b6cc4fbc4df318",
+        "type": "tab",
+        "label": "Digital Twin",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cae8f260686d43f0",
+        "type": "mqtt-broker",
+        "name": "Pi Broker",
+        "broker": "192.168.0.107",
+        "port": "1883",
+        "clientid": "Node-Red",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fd654955b4e6bd5a",
+        "type": "ui_tab",
+        "name": "Digital Twin Wheelchair",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "dad51ca96f6e5710",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Wheelchair Digital Twin",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "b220758de299eba2",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "fd654955b4e6bd5a",
+        "order": 1,
+        "disp": false,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b45673d4.b5364",
+        "type": "ui_group",
+        "name": "Standard",
+        "tab": "7874e5cb.93b9ec",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7874e5cb.93b9ec",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2b345d73.f4d042",
+        "type": "ui_group",
+        "name": "Circulating Pump Control",
+        "tab": "c9d53e06.a95c8",
+        "order": 4,
+        "disp": true,
+        "width": "5"
+    },
+    {
+        "id": "c9d53e06.a95c8",
+        "type": "ui_tab",
+        "name": "CURTIN house main page",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "e2ed99fb.aa45d8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "81c56d43.95adb",
+        "type": "ui_group",
+        "name": "Pump Status",
+        "tab": "a30b3814.18c8b8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a30b3814.18c8b8",
+        "type": "ui_tab",
+        "name": "Pool Control",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b3f482b265ae77bc",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 3,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "4f4c9db2b627fdba",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 4,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "010b47cd209438f4",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 5,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "8e2a07384e8af972",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 6,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "42d00947eae9abdc",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 7,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "22c500e3b7e042bb",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 8,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "f767f1275a9c9a4a",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 9,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "0952e4b4c5ace477",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 10,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "f094c71aea4f8b02",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 12,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "1192598ecc3aa57d",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 13,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "8f39e7c5f54120b8",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 14,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8841b610c04ed06a",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 16,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "dd6e3fbf233e937b",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 17,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0558e34383877b4f",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 19,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "e9385d5ef39e9757",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 20,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "456dc57a881362db",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 22,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "63467d8ab11d9b72",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 23,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "2375e48540ad9196",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 25,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "7a84d3c8b8d545d7",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 26,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "516d2d90f3db1332",
+        "type": "ui_spacer",
+        "z": "84b6cc4fbc4df318",
+        "name": "spacer",
+        "group": "b220758de299eba2",
+        "order": 27,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "d695fd83ed59688b",
+        "type": "mqtt in",
+        "z": "84b6cc4fbc4df318",
+        "name": "Up Down Motor Pos",
+        "topic": "/up_down_motor_pos",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "cae8f260686d43f0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "2b30e7d35deaf47b",
+                "029329f155fa56d3"
+            ]
+        ]
+    },
+    {
+        "id": "2b30e7d35deaf47b",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "up down motor pos",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 430,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "bf870e375127d3f2",
+        "type": "mqtt in",
+        "z": "84b6cc4fbc4df318",
+        "name": "Gyro",
+        "topic": "/gyro",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "cae8f260686d43f0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 540,
+        "wires": [
+            [
+                "3eac292ea9837d87",
+                "0eebf149893e223f",
+                "d16c6fb9cf6246cd"
+            ]
+        ]
+    },
+    {
+        "id": "3eac292ea9837d87",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "gyro data",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 400,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5c5a353767758402",
+        "type": "mqtt in",
+        "z": "84b6cc4fbc4df318",
+        "name": "Back Motor Pos",
+        "topic": "/back_motor_pos",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "cae8f260686d43f0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "775d505c35b53b1b",
+                "76f11672852d6d59"
+            ]
+        ]
+    },
+    {
+        "id": "775d505c35b53b1b",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "back motor pos",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 420,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9a2d8ef32db4b0a4",
+        "type": "mqtt in",
+        "z": "84b6cc4fbc4df318",
+        "name": "Steering",
+        "topic": "/steering",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "cae8f260686d43f0",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 380,
+        "wires": [
+            [
+                "00cfc8a31a6e9fd8",
+                "8ba44e4240b3a779"
+            ]
+        ]
+    },
+    {
+        "id": "00cfc8a31a6e9fd8",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "rodas",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 390,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "0eebf149893e223f",
+        "type": "split",
+        "z": "84b6cc4fbc4df318",
+        "name": "",
+        "splt": ",",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "5603ae86cace4637",
+                "d002e61037a5afcf"
+            ]
+        ]
+    },
+    {
+        "id": "5603ae86cace4637",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "spltted",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 590,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d002e61037a5afcf",
+        "type": "change",
+        "z": "84b6cc4fbc4df318",
+        "name": "to number",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(msg.payload)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 480,
+        "wires": [
+            [
+                "c585ca2b6e4cb58f",
+                "1d50987f8d341463"
+            ]
+        ]
+    },
+    {
+        "id": "c585ca2b6e4cb58f",
+        "type": "switch",
+        "z": "84b6cc4fbc4df318",
+        "name": "route",
+        "property": "parts.index",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 810,
+        "y": 480,
+        "wires": [
+            [
+                "68a2490aaecee89c",
+                "7c0ac66edd61443a"
+            ],
+            [
+                "6bbebef434eada90",
+                "51eae315329cd308"
+            ],
+            [
+                "c83e304a40ae1486",
+                "78e3a60bff2d4edf"
+            ]
+        ]
+    },
+    {
+        "id": "1d50987f8d341463",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "converted",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 780,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "68a2490aaecee89c",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "out 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 990,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6bbebef434eada90",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "out 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 990,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c83e304a40ae1486",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "out 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 990,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "1acab094789e6f73",
+        "type": "ui_text",
+        "z": "84b6cc4fbc4df318",
+        "group": "b220758de299eba2",
+        "order": 15,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Rodas",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 590,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "497ee68f620d836e",
+        "type": "ui_text",
+        "z": "84b6cc4fbc4df318",
+        "group": "b220758de299eba2",
+        "order": 21,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Motor de Apoio para as Costas",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 630,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b37c2087afc54d77",
+        "type": "ui_text",
+        "z": "84b6cc4fbc4df318",
+        "group": "b220758de299eba2",
+        "order": 18,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Motor do Assento",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 610,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7c0ac66edd61443a",
+        "type": "ui_chart",
+        "z": "84b6cc4fbc4df318",
+        "name": "",
+        "group": "b220758de299eba2",
+        "order": 1,
+        "width": 8,
+        "height": 8,
+        "label": "Rotação sobre o eixo lateral",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-100",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#2ca300",
+            "#aec7e8",
+            "#f57d14",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1060,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "51eae315329cd308",
+        "type": "ui_chart",
+        "z": "84b6cc4fbc4df318",
+        "name": "",
+        "group": "b220758de299eba2",
+        "order": 2,
+        "width": 8,
+        "height": 8,
+        "label": "Rotação sobre o eixo longitudinal",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-100",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#f10404",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1080,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "78e3a60bff2d4edf",
+        "type": "ui_chart",
+        "z": "84b6cc4fbc4df318",
+        "name": "",
+        "group": "b220758de299eba2",
+        "order": 11,
+        "width": 8,
+        "height": 8,
+        "label": "Rotação sobre o eixo vertical",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "165",
+        "ymax": "200",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1060,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c75424d77ba4fb6",
+        "type": "file",
+        "z": "84b6cc4fbc4df318",
+        "name": "write data to csv",
+        "filename": "gyro_data.csv",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 720,
+        "y": 620,
+        "wires": [
+            [
+                "603173173c03f9ef"
+            ]
+        ]
+    },
+    {
+        "id": "65ba6d685dbd203f",
+        "type": "watch",
+        "z": "84b6cc4fbc4df318",
+        "name": "check data",
+        "files": "gyro_data.csv",
+        "recursive": "",
+        "x": 400,
+        "y": 680,
+        "wires": [
+            [
+                "9e67dba6eb41555f"
+            ]
+        ]
+    },
+    {
+        "id": "603173173c03f9ef",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "9e67dba6eb41555f",
+        "type": "debug",
+        "z": "84b6cc4fbc4df318",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 590,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "fd5fa61306e2da4a",
+        "type": "function",
+        "z": "84b6cc4fbc4df318",
+        "name": "set_switch_status",
+        "func": "global.set(\"switch\", msg.payload)",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "global.set(\"switch\", false)\n",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b0c15eaf7f4168f",
+        "type": "ui_switch",
+        "z": "84b6cc4fbc4df318",
+        "name": "",
+        "label": "Guardar Dados em Ficheiro CSV",
+        "tooltip": "",
+        "group": "b220758de299eba2",
+        "order": 24,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 940,
+        "y": 160,
+        "wires": [
+            [
+                "fd5fa61306e2da4a"
+            ]
+        ]
+    },
+    {
+        "id": "d16c6fb9cf6246cd",
+        "type": "function",
+        "z": "84b6cc4fbc4df318",
+        "name": "check_switch_status",
+        "func": "if(global.get(\"switch\") == true){\n    let time = (new Date()).toISOString()\n    let aux_msg = time.concat(\",\", global.get(\"up_down_motor_state\"));\n    let aux_msg1 = aux_msg.concat(\",\", global.get(\"back_motor_state\"));\n    let aux_msg2 = aux_msg1.concat(\",\", global.get(\"steering_motor_state\"));\n    msg.payload = aux_msg2.concat(\",\", msg.payload)\n    return msg\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 620,
+        "wires": [
+            [
+                "8c75424d77ba4fb6"
+            ]
+        ]
+    },
+    {
+        "id": "8ba44e4240b3a779",
+        "type": "function",
+        "z": "84b6cc4fbc4df318",
+        "name": "define state",
+        "func": "let cmd = msg.payload;\nif (cmd.includes(\"steer_front\")){\n    msg.payload = \"Frente\";\n    global.set(\"steering_motor_state\", \"Rodas: Frente\")\n}\nelse if (cmd.includes(\"steer_back\")) {\n    msg.payload = \"Trás\";\n    global.set(\"steering_motor_state\", \"Rodas: Trás\")\n}\nelse if (cmd.includes(\"steer_right\")) {\n    msg.payload = \"Direita\";\n    global.set(\"steering_motor_state\", \"Rodas: Direita\")\n}\nelse if (cmd.includes(\"steer_left\")) {\n    msg.payload = \"Esquerda\";\n    global.set(\"steering_motor_state\", \"Rodas: Esquerda\")\n}\nelse if (cmd.includes(\"steer_stop\")) {\n    msg.payload = \"Paradas\";\n    global.set(\"steering_motor_state\", \"Rodas: Paradas\")\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "global.set(\"steering_motor_state\", \"Rodas: Paradas\")",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "1acab094789e6f73"
+            ]
+        ]
+    },
+    {
+        "id": "029329f155fa56d3",
+        "type": "function",
+        "z": "84b6cc4fbc4df318",
+        "name": "define state",
+        "func": "let cmd = msg.payload;\nif (cmd == \"down\"){\n    msg.payload = \"Baixo\";\n    global.set(\"up_down_motor_state\", \"Assento: Baixo\")\n}\nelse if (cmd == \"up\") {\n    msg.payload = \"Cima\";\n    global.set(\"up_down_motor_state\", \"Assento: Cima\")\n}\nelse if (cmd == \"stop_up_down\") {\n    msg.payload = \"Parado\";\n    global.set(\"up_down_motor_state\", \"Assento: Parado\")\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "global.set(\"up_down_motor_state\", \"Assento: Parado\")",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 120,
+        "wires": [
+            [
+                "b37c2087afc54d77"
+            ]
+        ]
+    },
+    {
+        "id": "76f11672852d6d59",
+        "type": "function",
+        "z": "84b6cc4fbc4df318",
+        "name": "define state",
+        "func": "let cmd = msg.payload;\nif (cmd == \"back\"){\n    msg.payload = \"Trás\";\n    global.set(\"back_motor_state\", \"Apoio para Costas: Trás\")\n}\nelse if (cmd == \"forward\") {\n    msg.payload = \"Frente\";\n    global.set(\"back_motor_state\", \"Apoio para Costas: Frente\")\n}\nelse if (cmd == \"stop_back\") {\n    msg.payload = \"Parado\";\n    global.set(\"back_motor_state\", \"Apoio para Costas: Parado\")\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "global.set(\"back_motor_state\", \"Apoio para Costas: Parado\")",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 240,
+        "wires": [
+            [
+                "497ee68f620d836e"
+            ]
+        ]
+    }
+]
